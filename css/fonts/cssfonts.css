@@ -64,3 +64,20 @@ a:hover {
 a:active {
     color: blue;
 }
+
+/*tr:nth-child(2n+1){
+    background-color: red;
+}
+tr:nth-child(2){
+    background-color: yellow;
+}*/
+table {
+    width: 100%;
+}
+
+td:nth-child(2n+1){
+    background-color: red;
+}
+td:nth-child(2n+2){
+    background-color: yellow;
+}
