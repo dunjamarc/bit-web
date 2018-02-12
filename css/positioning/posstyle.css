@@ -1,0 +1,59 @@
+body{
+    margin: 0 auto 0 auto;
+    width: 70%;
+}
+
+#block div, #relative div, #absolute div {
+    width: 200px;
+    height: 200px;
+}
+
+div > div:first-child {
+    background-color: rgb(141, 31, 31);
+}
+
+div > div:nth-child(2) {
+    background-color: rgb(58, 107, 30);
+}
+
+div > div:nth-child(3) {
+    background-color: rgb(67, 37, 122);
+}
+
+/*---------------------*/
+
+#relative > div, #absolute {
+    position: relative;
+}
+
+#relative div:nth-child(2) {
+    top: -100px;
+    left: 100px;
+}
+
+#relative div:nth-child(3) {
+    top: -200px;
+    left: 200px;
+}
+
+/*---------------------------*/
+#absolute > div {
+    position: absolute;
+}
+
+#absolute div:first-child {
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#absolute div:nth-child(2) {
+    top: 100px;
+    right: 100px;
+    z-index: 1;
+}
+
+#absolute div:nth-child(3) {
+    top: 200px;
+    right: 200px;
+}
