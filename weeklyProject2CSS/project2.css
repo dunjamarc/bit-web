@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header div {
+    background-image: url(img/banner3.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 5% 0;
+}
+
+header div h1 {
+    margin: 0 5%;
+    padding: 5%;
+    font-weight: 500;
+}
+
+button {
+    width: 180px;
+    padding: 15px 25px;
+    background-color: rgb(59, 93, 187);
+    color: white;
+    border-radius: 70px;
+    border: 0;
+    margin: 5% 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav h1 {
+    color: grey;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 40px 0 15px 0;
+}
+
+span {
+    color: orange;
+    border: 5px solid grey;
+    border-right: none;
+    padding-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    background-color: rgb(119, 173, 236);
+    margin: 0 4%;
+    padding: 15px 0;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+nav li a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------main------------------*/
+main {
+    margin: 15% 10%;
+}
+
+main h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+article h3 {
+    color:rgb(119, 173, 236);
+    margin: 30px 0;
+    font-size: 25px;
+}
+
+article p {
+    line-height: 1.7em;
+}
+
+article li {
+    padding: 10px;
+    color: grey;
+    letter-spacing: 1px;
+}
+
+article ul {
+    padding: 30px 20px;
+    list-style-image: url("img/arrow.png");
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*-----------------TABLET-------------------*/
+@media only screen and (min-width: 768px){
+
+    header div h1 {
+        margin: 150px 2% 0 2%;
+        padding: 0 5%;
+    }
+
+    header nav{
+        width: 100%;
+        text-align: initial;
+        position: absolute;
+        top: 0;
+    }
+
+    nav h1 {
+        display: inline-block;
+        margin: 30px 0 15px 30px;
+        color: white;
+    }
+
+    nav span {
+        border-color: white;
+    }
+
+    nav ul {
+        float: right;
+        margin: 30px 15px;
+    }
+
+    nav li {
+        margin: 0;
+        display: inline-block;
+        background-color: initial;
+        padding: 15px 5px;
+    }
+   
+    button {
+        margin: 30px 0 70px 0;
+    }
+
+    article:first-of-type {
+        width: 45%;
+        display: inline-block;
+    }
+
+    section img {
+        float: right;
+        width: 50%;
+        margin: 30px 0 0 5%;
+    }
+
+}
+
+/*-----------------DESKTOP-------------------*/
+@media only screen and (min-width: 1200px){
+    header div h1 {
+        font-size: 45px;
+        padding: 0;
+        margin: 280px 2% 0 2%;
+    }
+    
+    button {
+        margin: 30px 0 150px 0;
+    }
+
+    section {
+        width: 70%;
+        margin: 2% auto;
+    }
+
+    article, article:first-of-type {
+        width: 33%;
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+        padding: 0;
+    }
+
+    section img {
+        float: none;
+        width: 33%;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    main {
+        margin: 15% 0;
+    }
+
+    article h3 {
+
+        margin: 0 5px 30px 0;
+
+    }
+}
