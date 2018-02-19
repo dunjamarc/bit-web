@@ -33,9 +33,10 @@ a {
     width: 350px;
     background-color: white;
     padding: 0;
-    position: relative;
-    top: -15px;
-    left: 195px;
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
 }
 
 #dropdown li {
@@ -45,4 +46,12 @@ a {
 
 #dropdown li:nth-child(2n+2) {
     background-color: rgb(246, 245, 246);
+}
+
+#submenu:hover #dropdown {
+    display: block;
+}
+
+#submenu {
+    position: relative;
 }

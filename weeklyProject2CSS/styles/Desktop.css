@@ -56,14 +56,19 @@ article h3 {
 
 /* ----------contact-------------- */
 .contact {
-    width: 24.7%;
+    width: 25%;
+    float: left;
 }
 
 .contact:first-of-type {
     padding: 40px 40px 0 40px;
-    width: 24.7% !important;
+    width: 25% !important;
 }
 
 .contact img {
     width: auto;
+}
+
+iframe {
+    width: 100%;
 }

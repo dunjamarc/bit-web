@@ -1,0 +1,10 @@
+$color: red;
+$bg-color: yellow;
+$font-size: 20px;
+
+p {
+    color: $color;
+    background-color: $bg-color;
+    font-size: $font-size;
+    font-weight: 700;
+}
