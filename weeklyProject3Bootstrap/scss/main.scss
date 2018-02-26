@@ -1,0 +1,125 @@
+@import "variables";
+@import "mixins";
+
+@font-face {
+    font-family: Lato;
+    src: url(../vendor/font-awesome/Lato-Black.ttf);
+}
+
+* {
+    font-family: Lato, sans-serif;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+nav {
+    @include footer;
+    text-transform: uppercase;
+    font-weight: 900;
+    a {
+        color: $font-color;
+    }
+    li {
+        font-size: 13px;
+    }
+    button.navbar-toggler {
+        font-size: 13px;
+        border-color: #fff;
+        color: $font-color;
+        @media screen and (max-width: 576px){
+            margin: 0;
+            font-size: 13px;
+            border: none;
+            padding: 4px 12px;
+            background-color: $main-color;
+        }
+    }
+}
+
+#header {
+    background-color: $main-color;
+    color: $font-color;
+    text-align: center;
+    img {
+        margin: 40px auto 30px auto;
+    }
+    p {
+        padding: 30px 20px 40px 20px;
+    }
+}
+
+#portfolio {
+    h1 {
+        @include heading;
+    }
+    img {
+        margin-top: 30px;
+    }
+    margin-bottom: 70px;
+}
+
+#about {
+    .container {
+        @include desktop;
+    }
+    text-align: center;
+    background-color: $main-color;
+    color: $font-color;
+    h1 {
+        margin-bottom: 40px;
+        padding-top: 50px;
+    }
+    p {
+        line-height: 1.8em;
+        text-align: left;
+    }
+    .btn {
+        @include button;
+    }
+}
+
+#contact {
+    .container {
+        @include desktop;
+    }
+    h1 {
+        @include heading;
+    }
+    label {
+        width: 100%;
+        color: $form-text-color;
+        font-size: 20px;
+        margin-top: 20px;
+        input, textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgb(223, 212, 212);
+        }
+    }    
+    .btn {
+        @include button;
+    }
+}
+
+footer {
+    @include footer;
+    text-align: center;
+    h3 {
+        margin: 40px auto 30px auto;
+    }
+    .copyright {
+        font-size: 15px;
+        margin: 70px auto 20px auto;
+        span {
+            font-size: 14px;
+            color: $form-text-color;
+        }
+    }
+}

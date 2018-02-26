@@ -1,0 +1,25 @@
+@mixin heading {
+    color: rgb(37, 37, 37);
+    margin: 50px auto 40px auto;
+    font-weight: 900;
+}
+
+@mixin button {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: $font-color;
+    background-color: $main-color;
+    border: 2px solid #fff;
+    margin: 10px auto 60px auto;
+}
+
+@mixin footer {
+    background-color: $nav-color;
+    color: $font-color;
+}
+
+@mixin desktop {
+    @media screen and (min-width: 960px){
+        width: 800px;
+    }
+}

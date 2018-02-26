@@ -1,0 +1,111 @@
+@font-face {
+  font-family: Lato;
+  src: url(../vendor/font-awesome/Lato-Black.ttf); }
+* {
+  font-family: Lato, sans-serif; }
+
+h1, h3 {
+  text-transform: uppercase;
+  text-align: center; }
+
+p {
+  font-size: 18px; }
+
+nav {
+  background-color: #2c3e50;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900; }
+  nav a {
+    color: #fff; }
+  nav li {
+    font-size: 13px; }
+  nav button.navbar-toggler {
+    font-size: 13px;
+    border-color: #fff;
+    color: #fff; }
+    @media screen and (max-width: 576px) {
+      nav button.navbar-toggler {
+        margin: 0;
+        font-size: 13px;
+        border: none;
+        padding: 4px 12px;
+        background-color: #18bc9c; } }
+
+#header {
+  background-color: #18bc9c;
+  color: #fff;
+  text-align: center; }
+  #header img {
+    margin: 40px auto 30px auto; }
+  #header p {
+    padding: 30px 20px 40px 20px; }
+
+#portfolio {
+  margin-bottom: 70px; }
+  #portfolio h1 {
+    color: #252525;
+    margin: 50px auto 40px auto;
+    font-weight: 900; }
+  #portfolio img {
+    margin-top: 30px; }
+
+#about {
+  text-align: center;
+  background-color: #18bc9c;
+  color: #fff; }
+  @media screen and (min-width: 960px) {
+    #about .container {
+      width: 800px; } }
+  #about h1 {
+    margin-bottom: 40px;
+    padding-top: 50px; }
+  #about p {
+    line-height: 1.8em;
+    text-align: left; }
+  #about .btn {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #18bc9c;
+    border: 2px solid #fff;
+    margin: 10px auto 60px auto; }
+
+@media screen and (min-width: 960px) {
+  #contact .container {
+    width: 800px; } }
+#contact h1 {
+  color: #252525;
+  margin: 50px auto 40px auto;
+  font-weight: 900; }
+#contact label {
+  width: 100%;
+  color: #495057;
+  font-size: 20px;
+  margin-top: 20px; }
+  #contact label input, #contact label textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dfd4d4; }
+#contact .btn {
+  font-size: 18px;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #18bc9c;
+  border: 2px solid #fff;
+  margin: 10px auto 60px auto; }
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center; }
+  footer h3 {
+    margin: 40px auto 30px auto; }
+  footer .copyright {
+    font-size: 15px;
+    margin: 70px auto 20px auto; }
+    footer .copyright span {
+      font-size: 14px;
+      color: #495057; }
+
+/*# sourceMappingURL=main.css.map */

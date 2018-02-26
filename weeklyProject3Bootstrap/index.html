@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weekly Project 3</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#">bit student</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">MENU
+                        <span class="navbar-toggler-icon"></span>  <!--hamburger not working-->
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">portfolio
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+        <div id="header">
+            <div class="container">
+                <img src="img/profile.png" alt="profile">
+                <h3>bootstrap and sass</h3>
+                <p>Web Developer - Graphic Artist - User Experience Designer</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <div class="container">
+            <h1>portfolio</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="img/portfolio/cabin.png" alt="cabin">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="img/portfolio/cake.png" alt="cake">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="img/portfolio/circus.png" alt="circus">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="img/portfolio/game.png" alt="game">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="img/portfolio/safe.png" alt="safe">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="img/portfolio/submarine.png" alt="submarine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h1>about</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod officia illo illum quis in. Repellat aliquam
+                        quidem consequatur velit, iste voluptatibus asperiores non perspiciatis ipsa assumenda, consequuntur
+                        voluptatum alias. Minima.</p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod officia illo illum quis in. Repellat aliquam
+                        quidem consequatur velit, iste voluptatibus asperiores non perspiciatis ipsa assumenda, consequuntur
+                        voluptatum alias. Minima.</p>
+                </div>
+            </div>
+            <button class="btn">Find Out More</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h1>contact me</h1>
+            <form action="POST">
+                <label>Name
+                    <br>
+                    <input type="text" name="name">
+                </label>
+                <label>Email Address
+                    <br>
+                    <input type="email" name="email">
+                </label>
+                <label>Phone Number
+                    <br>
+                    <input type="tel" name="phone">
+                </label>
+                <label>Message
+                    <br>
+                    <textarea name="message" rows="6"></textarea>
+                </label>
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h3>location</h3>
+                    <p>Centar za obrazovanje
+                        <br>BIT TECHNOLOGY
+                        <br>Nemanjina 4/I, Beograd</p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h3>around the web</h3>
+                    <p>social networks</p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h3>more details</h3>
+                    <p>We believe that the future of Serbia firmly depends on our ability to scale the number of individuals
+                        involved in the IT sector. That is why we founded BIT.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <p class="copyright">Copyright &copy; Bit Student 2017
+                        <br>
+                        <span>Bit thanks to Start Bootstrap!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>
