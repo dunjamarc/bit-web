@@ -33,7 +33,7 @@ nav {
         font-size: 13px;
         border-color: #fff;
         color: $font-color;
-        @media screen and (max-width: 576px){
+        @media only screen and (max-width: 576px){
             margin: 0;
             font-size: 13px;
             border: none;
@@ -121,5 +121,13 @@ footer {
             font-size: 14px;
             color: $form-text-color;
         }
+    }
+    i {
+        border: 2px solid #fff;
+        padding-top: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 2px;
     }
 }
