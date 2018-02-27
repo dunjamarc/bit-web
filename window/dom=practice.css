@@ -1,0 +1,12 @@
+.color {
+    background-color: blueviolet;
+}
+
+.color-li {
+    background-color: aqua;
+}
+
+.color-last {
+    background-color: bisque;
+    text-transform: uppercase;
+}
