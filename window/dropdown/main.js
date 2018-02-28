@@ -12,11 +12,17 @@ function dropdown(arr, node){
 
 dropdown(['blue', 'red', 'green'], 'div');
 
-
 function dropdown2(arr, node){
-// unfinished
+    var selectEl = "<select>";
+    for(var i = 0; i < arr.length; i++){
+        var optionEl = "<option>" + arr[i] + "</option>";
+        selectEl += optionEl;
+    }
+    selectEl += "</select>";
+    document.querySelector(node).innerHTML = selectEl;
 }
 dropdown2(['north', 'south', 'west', 'east'], 'div:last-of-type');
+
 
 function checkInput(){
     var inputArr = document.querySelectorAll('input');
