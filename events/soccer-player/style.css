@@ -1,0 +1,12 @@
+div {
+    background-image: url('img/field.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid red;
+    height: 900px;
+}
+
+img {
+    width: 150px;
+    position: absolute;
+}
