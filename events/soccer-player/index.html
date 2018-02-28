@@ -10,6 +10,7 @@
 <body>
     <div>
         <img src="img/player.png" alt="">
+        <button id="stop">Stop Moving</button>
     </div>
 
     <script>
@@ -20,6 +21,14 @@
             document.querySelector('img').style.top = y + 'px';
             document.querySelector('img').style.left = x + 'px';
         }
+
+        document.querySelector('#stop').addEventListener('click', stopMoving);
+        function stopMoving(){
+            document.querySelector('div').onclick = function(event){
+                event.stopPropagation();
+            }
+        }
+
     </script>
 </body>
 </html>
