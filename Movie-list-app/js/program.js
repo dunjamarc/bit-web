@@ -22,13 +22,20 @@ function createProgram(event) {
     allPrograms.push(program);
 
     // create program dropdown
-    var numOfMovies = allMovies.length;
+    var numOfPrograms = allPrograms.length;
 
-    var newO = document.createElement("option");
-    var optValue = allMovies[numOfMovies-1].movieTitle;
+    var newP = document.createElement("option");
+    var optValue = allPrograms[numOfPrograms-1].date;
     var optText = document.createTextNode(optValue);
-    newO.appendChild(optText);
-    var selectMovie = document.querySelector("#movie");
-    selectMovie.appendChild(newO);
+    newP.appendChild(optText);
+    var selectProgram = document.querySelector("#program");
+    selectProgram.appendChild(newP);
+
+}
+
+document.querySelector('#button3').addEventListener('click', addMovie);
+
+function addMovie(event){
+
 
 }

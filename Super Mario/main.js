@@ -8,14 +8,15 @@ function runMario() {
     timer = setInterval(function() {
         backgroundPosition -= 10;
         document.querySelector('body').setAttribute('style', 'background-position-x:' + backgroundPosition + 'px');
-    }, 50);
-    console.log(backgroundPosition);
+    }, 100);
+    
 }
 
 function stopMario() {
     document.querySelector('#stand').setAttribute('style', 'display: block');
     document.querySelector('#run').setAttribute('style', 'display: none');
     clearInterval(timer);  // doesn't stop
+    
 }
 
 
