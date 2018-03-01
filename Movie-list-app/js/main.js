@@ -8,7 +8,9 @@ function Movie(movieTitle, movieLength, movieGenre) {
 var allMovies = [];
 
 
-document.querySelector('#button').addEventListener('click', function (event) {
+document.querySelector('#button').addEventListener('click', createMovie);
+
+function createMovie(event) {
 
     // take values from input
     var movieTitle = document.querySelector("#title").value;
@@ -17,27 +19,30 @@ document.querySelector('#button').addEventListener('click', function (event) {
     var option = select.options[select.selectedIndex].value;
     var movieGenre = option[0] + option[option.length - 1];
 
-    
+
     //validation
+    var error1 = document.querySelector('#error1');
     if (movieTitle === "") {
-        document.querySelector('#error1').textContent = 'Please enter movie title';
+        error1.textContent = 'Please enter movie title';
         return false;
     } else {
-        document.querySelector('#error1').textContent = '';
+        error1.textContent = '';
     }
     
+    var error2 = document.querySelector('#error2');
     if (movieLength === "" || movieLength <= 0) {
-        document.querySelector('#error2').textContent = 'Please enter correct movie length in minutes';
+        error2.textContent = 'Please enter correct movie length in minutes';
         return false;
     } else {
-        document.querySelector('#error2').textContent = '';
+        error2.textContent = '';
     }
 
+    var error3 = document.querySelector('#error3');
     if (option === "-") {
-        document.querySelector('#error3').textContent = 'Please choose genre';
+        error3.textContent = 'Please choose genre';
         return false;
     } else {
-        document.querySelector('#error3').textContent = '';
+        error3.textContent = '';
     }
 
 
@@ -65,4 +70,15 @@ document.querySelector('#button').addEventListener('click', function (event) {
     }
     document.querySelector("#span1").textContent = totalLength + 'min';
 
-})
+
+    // create movie dropdown
+    var numOfMovies = allMovies.length;
+
+    var newO = document.createElement("option");
+    var optValue = allMovies[numOfMovies-1].movieTitle;
+    var optText = document.createTextNode(optValue);
+    newO.appendChild(optText);
+    var selectMovie = document.querySelector("#movie");
+    selectMovie.appendChild(newO);
+}
+
