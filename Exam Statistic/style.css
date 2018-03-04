@@ -5,6 +5,7 @@
 
 * {
     font-family: Lato, sans-serif;
+    color: rgb(59, 59, 59);
 }
 
 h1, h2, #numOfPassed, #numOfFailed, #procent {
@@ -12,8 +13,11 @@ h1, h2, #numOfPassed, #numOfFailed, #procent {
     color: white;
 }
 
-header{
-    background-color: darkgray;
+header {
+    background-image: url('https://www.sciencenewsforstudents.org/sites/default/files/2017/05/main/blogposts/860_main_library_bacteria.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     padding: 40px 0;
 }
 
@@ -23,16 +27,19 @@ header{
     padding-left: 10px;
 }
 
-h3, ul{
+h3, ul {
     display: inline-block;
 }
-h3:nth-of-type(1){
+
+h3:nth-of-type(1) {
     width: 200px;
 }
-h3:nth-of-type(2){
+
+h3:nth-of-type(2) {
     width: 50px;
 }
-h3:nth-of-type(3){
+
+h3:nth-of-type(3) {
     width: 50px;
 }
 
@@ -46,17 +53,77 @@ h3:nth-of-type(3){
 
 form {
     background-color: tan;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 
 input, select {
-    padding: 8px;
-    margin: 5px;
-    border-radius: 3px;
-    border: none;
+    padding: 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid seagreen;
+}
+
+input[name=grade] {
+    width: 80px;
+}
+
+input[name=fullname] {
+    width: 350px;
 }
 
 ul {
-    width: 300px;
+    width: 400px;
+    margin: 30px;
+    font-weight: 100;
+    vertical-align: top;
+}
+
+li {
+    padding: 10px;
+}
+
+li span {
+    float: right;
+}
+
+body>div {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+#button {
+    color: seagreen;
+    background-color: tan;
+    font-size: 40px;
+    vertical-align: bottom;
+    padding: 0;
+    border: none;
+}
+
+#button:focus {
+    outline: none;
+    border: none;
+}
+
+#button:active {
+    position: relative;
+    top: 2px;
+    outline: none;
+}
+
+#procent {
+    font-size: 16px;
+    padding: 5px 0;
+    background-color: rgb(202, 69, 69);
+    border-radius: 3px;
+}
+
+h2 span {
+    color: #fff;
 }

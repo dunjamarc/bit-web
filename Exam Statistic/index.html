@@ -13,16 +13,16 @@
     <header>
         <h1>Exam statistic</h1>
         <h2>Total students:
-            <span>4</span>
+            <span>0</span>
         </h2>
         <div class="result" id="passed">
             <h3>PASSED</h3>
-            <h3 id="numOfPassed">2</h3>
+            <h3 id="numOfPassed">0</h3>
         </div>
         <div class="result" id="failed">
             <h3>FAILED</h3>
-            <h3 id="numOfFailed">2</h3>
-            <h3 id="procent">50%</h3>
+            <h3 id="numOfFailed">0</h3>
+            <h3 id="procent">%</h3>
         </div>
     </header>
 
@@ -33,15 +33,23 @@
             <option>SPA</option>
         </select>
         <input type="text" placeholder="Name Surname" name="fullname">
-        <input type="number" name="grade">
-        <input type="button" value="ADD">
+        <input type="number" name="grade" placeholder="Grade">
+        <input type="button" value="ADD" id="button">
     </form>
 
-    <ul>PASSED
-    </ul>
-    <ul>FAILED</ul>
+    <div>
+        <ul>PASSED
+        </ul>
+        <ul>
+            <span style="color:red"> FAILED</span>
+        </ul>
+    </div>
 
-    <script src="main.js"></script>
+    <script src="JS/subject.js"></script>
+    <script src="JS/student.js"></script>
+    <script src="JS/exam.js"></script>
+    <script src="JS/form.js"></script>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>
