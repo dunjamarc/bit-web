@@ -15,10 +15,22 @@ function createLi(event){
     var grade = document.querySelector('input[name=grade]').value; // grade
 
     // validation
-    
+    var error = document.querySelector('p');
+    if(nameArr.length < 2){
+        error.innerHTML = 'Please enter full name';
+        return false;
+    } else {
+        error.innerHTML = '';
+    }
+
+    if(grade < 0 || grade > 10 || grade == ''){
+        error.innerHTML = 'Please enter valid grade';
+        return false;
+    } else {
+        error.innerHTML = '';
+    }
 
     var exam = createExam(nameOfSubject, name, surname, grade);
-    allExams.push(exam);
 
     // create and add <li>
     var li = document.createElement('li');
