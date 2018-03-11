@@ -16,15 +16,11 @@
     <header>
         <div class="container">
             <span>BitShow</span>
-            <form>
-                <div class="dropdown">
-
-                    <input  type="search" placeholder="Search" id="myInput">
-                    <div id="myDropdown" class="dropdown-content">
-
-                    </div>
+            <div class="dropdown">
+                <input type="search" placeholder="Search" id="myInput">
+                <div id="myDropdown" class="dropdown-content">
                 </div>
-            </form>
+            </div>
         </div>
     </header>
 
@@ -32,13 +28,7 @@
         <h1>Popular Shows</h1>
         <div class="container">
             <div class="row">
-                <!-- <div class="col-md-4">
-                    <a href="showInfoPage.html">
-                        <img class="img-fluid" src="http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg" alt=""
-                            srcset="">
-                    </a>
-                    <p>title</p>
-                </div> -->
+
             </div>
         </div>
     </main>
@@ -57,9 +47,9 @@
     <script type="text/javascript" src="js/UIModule.js"></script>
     <script type="text/javascript" src="js/mainModule.js"></script>
     <script>
-        mainModule.searched();
-        mainModule.myFunction();
         mainModule.allShows();
+        mainModule.inputDropdown();
+        mainModule.searched();
         mainModule.switchToSingleShow();
     </script>
 </body>

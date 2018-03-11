@@ -11,20 +11,16 @@
     <title>ShowInfoPage</title>
 </head>
 
-<body id="singleShow">
+<body>
 
     <header>
-        <div class="container">
+        <div class="container header">
             <span>BitShow</span>
-            <form>
-                <div class="dropdown">
-
-                    <input type="search" placeholder="Search" id="myInput">
-                    <div id="myDropdown" class="dropdown-content">
-
-                    </div>
+            <div class="dropdown">
+                <input type="search" placeholder="Search" id="myInput">
+                <div id="myDropdown" class="dropdown-content">
                 </div>
-            </form>
+            </div>
         </div>
     </header>
 
@@ -36,8 +32,7 @@
                     <!-- <img src="http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg" alt=""> -->
                 </div>
                 <div class="col-md-4">
-                    <h3>Seasons (
-                        <span></span>)</h3>
+                    <h3>Seasons (<span id="number">0</span>)</h3>
                     <ul id="seasons">
                     </ul>
 
@@ -67,9 +62,9 @@
     <script type="text/javascript" src="js/UIModule.js"></script>
     <script type="text/javascript" src="js/mainModule.js"></script>
     <script>
-        mainModule.searched();
-        mainModule.myFunction();
         mainModule.initSingleShow();
+        mainModule.inputDropdown();
+        mainModule.searched();
     </script>
 </body>
 

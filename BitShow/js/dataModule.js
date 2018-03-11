@@ -1,4 +1,4 @@
-const dataModule = (function () {
+const dataModule = (() => {
     let allShows = [];
 
     class TVShows {
@@ -9,15 +9,14 @@ const dataModule = (function () {
         }
     }
 
-    function createTVShows(id, name, image) {
+    const createTVShows = (id, name, image) => {
         const TVShow = new TVShows(id, name, image);
         allShows.push(TVShow);
         return TVShow;
     }
-    //-----------------------------------------------
 
-    function searchedShows(showsData) {
-        return showsData.map(function (showWrap) {
+    const searchedShows = showsData => {
+        return showsData.map(showWrap => {
             const { show } = showWrap;
             return new TVShows(show.id, show.name, show.image);
         })
@@ -28,6 +27,6 @@ const dataModule = (function () {
         createTVShows,
         searchedShows,
         allShows,
-        
     }
+
 })();

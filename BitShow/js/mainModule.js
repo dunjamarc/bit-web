@@ -1,4 +1,4 @@
-const mainModule = (function () {
+const mainModule = (() => {
 
     const initSingleShow = () => {
 
@@ -7,56 +7,63 @@ const mainModule = (function () {
             url: `http://api.tvmaze.com/shows/${singleShowId}`
         })
         
-        singleShowRequest.done(function (response) {
+        singleShowRequest.done(response => {
             UIModule.displaySingleShow(response);
+        })
+
+        const allSeasons = $.get({
+            url: `http://api.tvmaze.com/shows/${singleShowId}/seasons`
+        })
+        
+        allSeasons.done(response => {
+
+            response.forEach(response => {
+                UIModule.displaySeasons(response);
+            })
+
         })
 
         const cast = $.get({
             url: `http://api.tvmaze.com/shows/${singleShowId}/cast`
         })
         
-        cast.done(function(response){
+        cast.done(response => {
             
-            response.forEach(function(response){
+            response.forEach(response => {
                 const { person } = response;
                 UIModule.displayCast(person);
             })
-
         })
-        // get show from localStorage
-        // populate html with that object
     }
 
-    function myFunction() {
+    const inputDropdown = () => {
 
-        $('#myInput').on('click', function () {
+        $('#myInput').on('click', () => {
             $('#myDropdown').toggleClass("show");
         })
 
         $('input').keyup(searched);
     }
-    //----------------------------------
 
-    function allShows() {
+    const allShows = () => {
 
         const allShowsRequest = $.get({
             url: `http://api.tvmaze.com/shows`
         })
 
-        allShowsRequest.done(function (response) {
+        allShowsRequest.done(response => {
             const shows = response.slice(0, 50);
 
-            shows.forEach(function (show) {
+            shows.forEach(show => {
                 const singleShow = dataModule.createTVShows(show.id, show.name, show.image.original);
                 UIModule.displayShows(singleShow);
             })
 
             $('.showDiv').on('click', switchToSingleShow);
         })
-
     }
 
-    function searched() {
+    const searched = () => {
 
         const searchedShow = $('input').val();
 
@@ -64,7 +71,7 @@ const mainModule = (function () {
             url: `http://api.tvmaze.com/search/shows?q=${searchedShow}`
         });
 
-        request.done(function (response) {
+        request.done(response => {
             $('#myDropdown').text("");
 
             const myShows = dataModule.searchedShows(response)
@@ -72,40 +79,21 @@ const mainModule = (function () {
 
             $('.searchList').on('click', switchToSingleShow);
         });
-
-
     }
 
     function switchToSingleShow(event) {
 
         const showId = $(this).attr('id');
         localStorage.setItem('showId', showId);
-
     }
 
+
     return {
-        myFunction,
+        inputDropdown,
         allShows,
         switchToSingleShow,
         searched,
         initSingleShow
     }
 
-
 })(dataModule, UIModule);
-
-        // const seasonsRequest = $.get({
-        //     url: `http://api.tvmaze.com/shows/${}/seasons`
-        // })
-
-        // seasonsRequest.done(function (seasons) {
-        //     const shows = response.slice(0, 50);
-        // UIModule.displaySingleShow();
-
-        //     shows.forEach(function (show) {
-        //         const singleShow = dataModule.createTVShows(show.id, show.name, show.image.original);
-        //         UIModule.displayShows(singleShow);
-        //     })
-        // }
-
-        // const castRequest
